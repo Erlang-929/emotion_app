@@ -6,5 +6,7 @@ regex
 streamlit
 tensorflow
 transformers
+tf-keras
+
 
 
