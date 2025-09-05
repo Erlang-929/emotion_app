@@ -1,11 +1,10 @@
 ﻿emoji
 huggingface-hub
-keras
 pandas
 plotly
 regex
 streamlit
 tensorflow
-tokenizers
 transformers
+
 
