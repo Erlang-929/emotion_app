@@ -1,5 +1,7 @@
 import streamlit as st
-import tensorflow as tf
+#import tensorflow as tf
+import keras  # gunakan tf-keras package
+from keras.models import load_model
 from transformers import TFBertModel, BertTokenizer, AutoTokenizer
 import pandas as pd
 import plotly.express as px
@@ -24,7 +26,7 @@ model_path = hf_hub_download(
     repo_id="erlangram/text_emotion_model", 
     filename="model _indobert2.h5")
 
-model = tf.keras.models.load_model(
+model = load_model(
     model_path,
     compile=False,
     custom_objects={"TFBertModel": TFBertModel}
@@ -202,4 +204,5 @@ with tab2:
 
                 st.success("**Emotion Counts**")
                 st.table(label_counts)
+
 
