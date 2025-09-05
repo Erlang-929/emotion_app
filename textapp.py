@@ -1,5 +1,5 @@
 import streamlit as st
-#import tensorflow as tf
+import tensorflow as tf
 import keras  # gunakan tf-keras package
 from keras.models import load_model
 from transformers import TFBertModel, BertTokenizer, AutoTokenizer
@@ -204,5 +204,6 @@ with tab2:
 
                 st.success("**Emotion Counts**")
                 st.table(label_counts)
+
 
 
